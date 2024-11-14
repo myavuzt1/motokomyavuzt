@@ -1,0 +1,33 @@
+actor calculator{
+  var x: Int = 0;
+  //additon
+  public func add(y: Int) : async Int{
+    x+=y;
+    x
+  };
+  //subtraction
+  public func sub(y: Int) : async Int{
+    x-=y;
+    x
+  }; 
+  //multiplication
+  public func mult(y: Int) : async Int{
+    x*=y;
+    x
+  };
+  //division
+  public func div(y: Int) : async ?Int{
+    if(y==0){
+      null
+    }
+    else{
+      x /=y;
+      ?x
+      };
+    };
+
+  //clear
+  public func clear() : async(){
+    x := 0;
+  };
+};
